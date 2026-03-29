@@ -1,0 +1,7 @@
+.env
+AGENTS.md
+target/
+addresses/*
+!addresses/domkerk-utrecht.toml
+orders/*
+!orders/btcwip-example.toml

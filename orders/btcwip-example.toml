@@ -1,0 +1,54 @@
+currency = "EUR"
+
+[github_release]
+owner = "Sjors"
+repo = "nado-book"
+cover_asset_name = "nado-cover-rgb.pdf"
+book_asset_name = "nado-paperback.pdf"
+
+[item]
+product = "textbook_pb_a5_p_bw"
+title = "Bitcoin - A Work in Progress"
+# Optional commercial/customs metadata for the end-customer sale.
+# `price` should exclude VAT/tax, `currency` is its ISO 4217 code,
+# and `harmonized_code` is the customs/HS code for the product.
+# price = "24.95"
+# currency = "EUR"
+# harmonized_code = "49019900"
+
+# Book options for this product.
+# The available option references for a specific product come from the CloudPrinter
+# `products/info` endpoint:
+# https://docs.cloudprinter.com/client/cloudprinter-core-api-v1-0
+# General option-type definitions are here:
+# https://docs.cloudprinter.com/client/cloudcore-api-base-definitions-v1-0
+[[item.options]]
+# Required for books.
+type = "total_pages"
+count = "224"
+
+[[item.options]]
+type = "pageblock_90mcs"
+count = "224"
+
+[[item.options]]
+type = "cover_250ecb"
+count = "1"
+
+[[item.options]]
+type = "cover_finish_matte"
+count = "1"
+
+# These file entries are only needed when you are not using `--version` or `--latest`.
+# With those flags, the script resolves the PDFs from the GitHub release and fills in
+# the file URLs and md5 sums automatically.
+#
+# [[item.files]]
+# type = "cover"
+# url = "https://example.com/nado-cover.pdf"
+# md5sum = "replace-with-cover-md5"
+#
+# [[item.files]]
+# type = "book"
+# url = "https://example.com/nado-paperback.pdf"
+# md5sum = "replace-with-book-md5"

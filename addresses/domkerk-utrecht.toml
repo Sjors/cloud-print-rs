@@ -1,0 +1,14 @@
+company = "Domkerk"
+firstname = "Domkerk"
+lastname = "Orders"
+street1 = "Achter de Dom 1"
+zip = "3512 JN"
+city = "Utrecht"
+country = "NL"
+# Example-only sandbox contact details.
+# General contact email for the customer/order.
+order_email = "domkerk-orders@example.com"
+# Email address for delivery issues (can be the same).
+delivery_email = "domkerk-orders@example.com"
+# Uses the fictional North American 555-01xx range.
+phone = "+1 212-555-0101"
