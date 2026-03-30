@@ -37,8 +37,9 @@ Quote
 
 Print details
   - Release tag: v1.0.5
-  - cover PDF: https://github.com/Sjors/nado-book/releases/download/v1.0.5/nado-cover-rgb.pdf
-  - book PDF: https://github.com/Sjors/nado-book/releases/download/v1.0.5/nado-paperback.pdf
+  - Product: Textbook PB A5 P BW TNR (textbook_pb_a5_p_bw)
+  - cover PDF: https://github.com/Sjors/nado-book/releases/download/v1.0.5/nado-cover-rgb-v1.0.5.pdf
+  - book PDF: https://github.com/Sjors/nado-book/releases/download/v1.0.5/nado-paperback-v1.0.5.pdf
   - Total pages: 224
   - Pageblock paper: 90gsm Machine Coated Silk
   - Cover paper: 250gsm Gloss coated graphical board (250ECB)

@@ -3,11 +3,11 @@ currency = "EUR"
 [github_release]
 owner = "Sjors"
 repo = "nado-book"
-cover_asset_name = "nado-cover-rgb.pdf"
-book_asset_name = "nado-paperback.pdf"
+cover_asset_name = "nado-cover-rgb-v1.0.5.pdf"
+book_asset_name = "nado-paperback-v1.0.5-bleed.pdf"
 
 [item]
-product = "textbook_pb_digest_p_bw"
+product = "textbook_pb_a5_p_bw"
 title = "Bitcoin - A Work in Progress"
 # Optional commercial/customs metadata for the end-customer sale.
 # `price` should exclude VAT/tax, `currency` is its ISO 4217 code,

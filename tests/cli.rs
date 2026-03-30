@@ -56,12 +56,22 @@ currency = "EUR"
 [github_release]
 owner = "Sjors"
 repo = "nado-book"
-cover_asset_name = "nado-cover-rgb.pdf"
-book_asset_name = "nado-paperback.pdf"
+cover_asset_name = "nado-cover-rgb-v1.0.5.pdf"
+book_asset_name = "nado-paperback-v1.0.5.pdf"
 
 [item]
-product = "textbook_pb_digest_p_bw"
+product = "textbook_pb_a5_p_bw"
 title = "Bitcoin - A Work in Progress"
+
+[[item.files]]
+type = "cover"
+url = "https://example.com/nado-cover-rgb-v1.0.5.pdf"
+md5sum = "covermd5"
+
+[[item.files]]
+type = "book"
+url = "https://example.com/nado-paperback-v1.0.5.pdf"
+md5sum = "bookmd5"
 
 [[item.options]]
 type = "total_pages"
@@ -111,8 +121,7 @@ delivery_email = "delivery@domkerk.example"
         .arg("--reference")
         .arg("domkerk-21")
         .arg("--count")
-        .arg("21")
-        .arg("--latest");
+        .arg("21");
 
     command
         .assert()
@@ -122,12 +131,14 @@ delivery_email = "delivery@domkerk.example"
             "  - expires: 2026-03-31 14:00:00 +02:00",
         ))
         .stdout(predicate::str::contains("Print details"))
-        .stdout(predicate::str::contains("  - Release tag: v1.0.5"))
         .stdout(predicate::str::contains(
-            "  - Product: Textbook PB Digest P BW TNR (textbook_pb_digest_p_bw)",
+            "  - Product: Textbook PB A5 P BW TNR (textbook_pb_a5_p_bw)",
         ))
         .stdout(predicate::str::contains(
-            "  - cover PDF: https://github.com/Sjors/nado-book/releases/download/v1.0.5/nado-cover-rgb.pdf",
+            "  - cover PDF: https://example.com/nado-cover-rgb-v1.0.5.pdf",
+        ))
+        .stdout(predicate::str::contains(
+            "  - book PDF: https://example.com/nado-paperback-v1.0.5.pdf",
         ))
         .stdout(predicate::str::contains("Order details"))
         .stdout(predicate::str::contains("  - Quantity: 21"))
@@ -189,11 +200,11 @@ fn submit_dry_run_embeds_quote_hash() -> Result<(), Box<dyn std::error::Error>> 
 [github_release]
 owner = "Sjors"
 repo = "nado-book"
-cover_asset_name = "nado-cover-rgb.pdf"
-book_asset_name = "nado-paperback.pdf"
+cover_asset_name = "nado-cover-rgb-v1.0.5.pdf"
+book_asset_name = "nado-paperback-v1.0.5.pdf"
 
 [item]
-product = "textbook_pb_digest_p_bw"
+product = "textbook_pb_a5_p_bw"
 title = "Bitcoin - A Work in Progress"
 
 [[item.files]]
@@ -231,7 +242,7 @@ template = "{}"
 address = "{}"
 reference = "domkerk-21"
 count = 21
-product = "textbook_pb_digest_p_bw"
+product = "textbook_pb_a5_p_bw"
 quote_hash = "quote-domkerk-postal"
 shipping_level = "cp_postal"
 shipping_option = "National Post - Int. Postal Untracked"
@@ -239,7 +250,7 @@ shipping_price = "12.5000"
 currency = "EUR"
 
 [release_selector]
-latest = true
+latest = false
 "#,
             config_path.display(),
             address_path.display()

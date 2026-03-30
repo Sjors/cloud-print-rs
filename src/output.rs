@@ -54,10 +54,7 @@ pub(crate) fn print_quote_response(
     if let Some(tag) = &resolved_files.release_tag {
         println!("  - Release tag: {tag}");
     }
-    println!(
-        "  - Product: {}",
-        format_product(&order.book.item.product)
-    );
+    println!("  - Product: {}", format_product(&order.book.item.product));
     for file in &resolved_files.files {
         println!(
             "  - {}: {}",

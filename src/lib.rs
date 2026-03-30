@@ -122,11 +122,11 @@ mod tests {
                 github_release: GithubReleaseConfig {
                     owner: "Sjors".to_string(),
                     repo: "nado-book".to_string(),
-                    cover_asset_name: "nado-cover-rgb.pdf".to_string(),
-                    book_asset_name: "nado-paperback.pdf".to_string(),
+                    cover_asset_name: "nado-cover-rgb-v1.0.5.pdf".to_string(),
+                    book_asset_name: "nado-paperback-v1.0.5.pdf".to_string(),
                 },
                 item: BookItemConfig {
-                    product: "textbook_pb_digest_p_bw".to_string(),
+                    product: "textbook_pb_a5_p_bw".to_string(),
                     title: Some("Bitcoin - A Work in Progress".to_string()),
                     price: None,
                     currency: None,
@@ -189,11 +189,11 @@ mod tests {
                 github_release: GithubReleaseConfig {
                     owner: "Sjors".to_string(),
                     repo: "nado-book".to_string(),
-                    cover_asset_name: "nado-cover-rgb.pdf".to_string(),
-                    book_asset_name: "nado-paperback.pdf".to_string(),
+                    cover_asset_name: "nado-cover-rgb-v1.0.5.pdf".to_string(),
+                    book_asset_name: "nado-paperback-v1.0.5.pdf".to_string(),
                 },
                 item: BookItemConfig {
-                    product: "textbook_pb_digest_p_bw".to_string(),
+                    product: "textbook_pb_a5_p_bw".to_string(),
                     title: Some("Bitcoin - A Work in Progress".to_string()),
                     price: None,
                     currency: None,
