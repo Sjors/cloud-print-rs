@@ -126,7 +126,7 @@ mod tests {
                     book_asset_name: "nado-paperback.pdf".to_string(),
                 },
                 item: BookItemConfig {
-                    product: "textbook_pb_a5_p_bw".to_string(),
+                    product: "textbook_pb_digest_p_bw".to_string(),
                     title: Some("Bitcoin - A Work in Progress".to_string()),
                     price: None,
                     currency: None,
@@ -193,7 +193,7 @@ mod tests {
                     book_asset_name: "nado-paperback.pdf".to_string(),
                 },
                 item: BookItemConfig {
-                    product: "textbook_pb_a5_p_bw".to_string(),
+                    product: "textbook_pb_digest_p_bw".to_string(),
                     title: Some("Bitcoin - A Work in Progress".to_string()),
                     price: None,
                     currency: None,

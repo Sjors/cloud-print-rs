@@ -54,6 +54,10 @@ pub(crate) fn print_quote_response(
     if let Some(tag) = &resolved_files.release_tag {
         println!("  - Release tag: {tag}");
     }
+    println!(
+        "  - Product: {}",
+        format_product(&order.book.item.product)
+    );
     for file in &resolved_files.files {
         println!(
             "  - {}: {}",
@@ -230,6 +234,19 @@ fn format_option_detail(option: &ItemOption) -> String {
         "cover_250ecb" => "Cover paper: 250gsm Gloss coated graphical board (250ECB)".to_string(),
         "cover_finish_matte" => "Cover lamination: Matte finish".to_string(),
         _ => format!("{} x {}", option.option_type, option.count),
+    }
+}
+
+fn format_product(product: &str) -> String {
+    let name = match product {
+        "textbook_pb_digest_p_bw" => Some("Textbook PB Digest P BW TNR"),
+        "textbook_pb_a5_p_bw" => Some("Textbook PB A5 P BW TNR"),
+        _ => None,
+    };
+
+    match name {
+        Some(name) => format!("{name} ({product})"),
+        None => product.to_string(),
     }
 }
 

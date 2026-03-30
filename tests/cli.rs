@@ -60,7 +60,7 @@ cover_asset_name = "nado-cover-rgb.pdf"
 book_asset_name = "nado-paperback.pdf"
 
 [item]
-product = "textbook_pb_a5_p_bw"
+product = "textbook_pb_digest_p_bw"
 title = "Bitcoin - A Work in Progress"
 
 [[item.options]]
@@ -123,6 +123,9 @@ delivery_email = "delivery@domkerk.example"
         ))
         .stdout(predicate::str::contains("Print details"))
         .stdout(predicate::str::contains("  - Release tag: v1.0.5"))
+        .stdout(predicate::str::contains(
+            "  - Product: Textbook PB Digest P BW TNR (textbook_pb_digest_p_bw)",
+        ))
         .stdout(predicate::str::contains(
             "  - cover PDF: https://github.com/Sjors/nado-book/releases/download/v1.0.5/nado-cover-rgb.pdf",
         ))
@@ -190,7 +193,7 @@ cover_asset_name = "nado-cover-rgb.pdf"
 book_asset_name = "nado-paperback.pdf"
 
 [item]
-product = "textbook_pb_a5_p_bw"
+product = "textbook_pb_digest_p_bw"
 title = "Bitcoin - A Work in Progress"
 
 [[item.files]]
@@ -228,7 +231,7 @@ template = "{}"
 address = "{}"
 reference = "domkerk-21"
 count = 21
-product = "textbook_pb_a5_p_bw"
+product = "textbook_pb_digest_p_bw"
 quote_hash = "quote-domkerk-postal"
 shipping_level = "cp_postal"
 shipping_option = "National Post - Int. Postal Untracked"

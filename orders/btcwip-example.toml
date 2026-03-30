@@ -7,7 +7,7 @@ cover_asset_name = "nado-cover-rgb.pdf"
 book_asset_name = "nado-paperback.pdf"
 
 [item]
-product = "textbook_pb_a5_p_bw"
+product = "textbook_pb_digest_p_bw"
 title = "Bitcoin - A Work in Progress"
 # Optional commercial/customs metadata for the end-customer sale.
 # `price` should exclude VAT/tax, `currency` is its ISO 4217 code,
